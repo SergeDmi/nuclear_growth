@@ -1,6 +1,6 @@
 function [  ] = plot_nucleus_sim( CELL_STAGE , parameters, exp_data )
 % Plots results from nuclear_growth_sequence
-%   just that
+%   very specific !
 
 n_div=numel(CELL_STAGE);
 
@@ -30,8 +30,6 @@ for n=2:n_max
         err=exp_data(n).errdata;
         t=exp_data(n).times;
         errorbar(t,pts,err)
-        %t=stage.time(1)+(1:length(pts))-1;
-        %scatter(t,pts)
     end
     plot(stage.time,stage.nucsize,'k','LineWidth',1.5)
 
@@ -61,21 +59,14 @@ plot(2:n_max,max_sim(2:n_max)./ntot_sim(2:n_max),'b')
 xlabel('Stage')
 ylabel('N_{max}/N_{tot}')
 
-
-
 figure
 hold all
 fact=1.0;
 for n=1:n_max
     stage=CELL_STAGE(n);
-    %if n==1
-    %    fact=10.0/max(stage.persize);
-    %end
-
     plot(stage.time,fact*stage.rescaled_per,'k','LineWidth',1.5)
-
-
 end
+
 xlabel('Time')
 ylabel('PER Size')
 if isfield(parameters,'title')

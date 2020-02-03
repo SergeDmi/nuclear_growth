@@ -7,7 +7,7 @@ function [  ] = save_cell_stage(CELL_STAGE, parameters, exp_data)
 if isfield(parameters,'folder')
   folder=parameters.folder;
 else
-  folder='';
+  folder='results/';
 end
 
 if isfield(parameters,'prefix')

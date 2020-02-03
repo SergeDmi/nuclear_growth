@@ -11,6 +11,11 @@ function [ CELL_STAGE , flag] = nuclear_growth_sequence(  exp_data, parameters  
 % maxsize : maximum nuclear size
 % N_tot : available nuclear surface
 % times : simulated times
+%
+% exp_data : a structure that contains
+%				times : time points
+%				nucdata : experimentally measured nuclear surface
+%				errdata : error on experimental measure of nuclear surface
 
 if nargin < 2
 	parameters=nucleus_parameters();
