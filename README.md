@@ -30,7 +30,7 @@ parameters.N_sat=parameters.N_sat/2;
 Or create a new parameter file, e.g. : parameters/altered_parameters.m  
 In which case the first line of parameters/altered_parameters.m should be :
 ```matlab
-function [ parameters ] = nucleus_parameters(  )
+function [ parameters ] = altered_parameters(  )
 ```
 
 And then call it in your script (e.g. copied from script_integ_nucleus) as :  
